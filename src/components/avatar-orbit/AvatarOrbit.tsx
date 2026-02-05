@@ -21,10 +21,10 @@ const platformColors = {
 
 // Card positions: [x%, y%] from center, representing where cards appear
 const cardPositions = [
-  { x: -35, y: -25 },  // Top left
-  { x: 35, y: -20 },   // Top right
-  { x: -38, y: 20 },   // Bottom left
-  { x: 38, y: 15 },    // Bottom right
+  { x: -35, y: -25 }, // Top left
+  { x: 35, y: -20 }, // Top right
+  { x: -38, y: 20 }, // Bottom left
+  { x: 38, y: 15 }, // Bottom right
 ];
 
 export function AvatarOrbit() {
@@ -32,23 +32,44 @@ export function AvatarOrbit() {
   const isInView = useInView(sectionRef, { once: false, amount: 0.4 });
 
   return (
-    <section 
+    <section
       ref={sectionRef}
-      className="relative w-screen h-screen overflow-hidden"
-      style={{ 
-        backgroundImage: `url(${orbitBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
+      className="relative w-screen h-screen overflow-hidden gradient-smooth-blue"
     >
+      {/* Top gradient fade to blend with previous section */}
+      <div
+        className="absolute top-0 left-0 right-0 h-48 md:h-64 lg:h-80 pointer-events-none z-10"
+        style={{
+          background:
+            "linear-gradient(180deg, hsl(0 0% 2%) 0%, hsl(0 0% 2% / 0.95) 10%, hsl(0 0% 2% / 0.85) 20%, hsl(0 0% 2% / 0.7) 30%, hsl(0 0% 2% / 0.5) 45%, hsl(0 0% 2% / 0.25) 65%, hsl(0 0% 2% / 0.1) 80%, transparent 100%)",
+        }}
+      />
+
+      {/* Bottom gradient fade to blend with next section */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-48 md:h-64 lg:h-80 pointer-events-none z-10"
+        style={{
+          background:
+            "linear-gradient(0deg, hsl(0 0% 2%) 0%, hsl(0 0% 2% / 0.95) 10%, hsl(0 0% 2% / 0.85) 20%, hsl(0 0% 2% / 0.7) 30%, hsl(0 0% 2% / 0.5) 45%, hsl(0 0% 2% / 0.25) 65%, hsl(0 0% 2% / 0.1) 80%, transparent 100%)",
+        }}
+      />
+
+      {/* Blurred gradient overlay - smooth transitions */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle at 30% 40%, hsl(220 90% 30% / 0.5) 0%, hsl(220 85% 28% / 0.35) 20%, transparent 60%), radial-gradient(circle at 70% 60%, hsl(240 80% 25% / 0.4) 0%, hsl(240 75% 22% / 0.25) 20%, transparent 60%)",
+          filter: "blur(120px)",
+        }}
+      />
       {/* Social Media Client Cards - Radial Expansion */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         {socialCards.map((card, index) => {
           const Icon = platformIcons[card.platform];
           const color = platformColors[card.platform];
           const position = cardPositions[index % cardPositions.length];
-          
+
           // Convert percentage to viewport units
           const translateX = (position.x / 100) * window.innerWidth * 0.8;
           const translateY = (position.y / 100) * window.innerHeight * 0.8;
@@ -58,17 +79,21 @@ export function AvatarOrbit() {
               key={card.id}
               className="absolute pointer-events-auto"
               initial={{ x: 0, y: 0, scale: 0, opacity: 0 }}
-              animate={isInView ? {
-                x: translateX,
-                y: translateY,
-                scale: 1,
-                opacity: 1,
-              } : {
-                x: 0,
-                y: 0,
-                scale: 0,
-                opacity: 0,
-              }}
+              animate={
+                isInView
+                  ? {
+                      x: translateX,
+                      y: translateY,
+                      scale: 1,
+                      opacity: 1,
+                    }
+                  : {
+                      x: 0,
+                      y: 0,
+                      scale: 0,
+                      opacity: 0,
+                    }
+              }
               transition={{
                 duration: 1.2,
                 delay: index * 0.12,
@@ -87,26 +112,23 @@ export function AvatarOrbit() {
               >
                 {/* Avatar */}
                 <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-border/50 flex-shrink-0">
-                  <img 
-                    src={card.avatar} 
+                  <img
+                    src={card.avatar}
                     alt={card.name}
                     className="w-full h-full object-cover"
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = '/placeholder.svg';
+                      (e.target as HTMLImageElement).src = "/placeholder.svg";
                     }}
                   />
                 </div>
-                
+
                 {/* Info */}
                 <div className="flex flex-col">
                   <span className="text-foreground font-bold text-sm tracking-wide uppercase">
                     {card.name}
                   </span>
                   <div className="flex items-center gap-1.5">
-                    <Icon 
-                      className="w-4 h-4" 
-                      style={{ color }}
-                    />
+                    <Icon className="w-4 h-4" style={{ color }} />
                     <span className="text-muted-foreground text-xs">
                       {card.followers}
                     </span>
@@ -123,10 +145,9 @@ export function AvatarOrbit() {
         <img
           src={mainAvatar}
           alt="Creator Avatar"
-          className="w-auto max-w-none object-cover"
+          className="w-full max-w-none object-contain h-[35%] md:h-[100%]"
           style={{
-            height: '115%',
-            minWidth: 'auto',
+            minWidth: "auto",
           }}
         />
       </div>

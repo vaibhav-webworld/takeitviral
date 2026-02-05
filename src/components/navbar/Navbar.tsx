@@ -55,7 +55,7 @@ export function Navbar() {
             />
             <circle cx="16" cy="16" r="3" fill="currentColor" />
           </svg>
-          <span>Neura</span>
+          <span>TakeItViral</span>
         </motion.a>
 
         {/* Nav Links */}

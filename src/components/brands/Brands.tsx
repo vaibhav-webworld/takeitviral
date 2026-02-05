@@ -8,7 +8,7 @@ export function Brands() {
   const duplicatedBrands = [...brands, ...brands];
 
   return (
-    <section className="section section-top-fade py-12 overflow-hidden border-b border-border relative">
+    <section className="section section-top-fade py-24 overflow-hidden border-b border-border relative">
       {/* Blur gradients */}
       <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />

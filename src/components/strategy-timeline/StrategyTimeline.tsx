@@ -7,7 +7,6 @@ import { strategySteps } from "@/data/strategySteps";
 export function StrategyTimeline() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [visibleCount, setVisibleCount] = useState(0);
-  const [isComplete, setIsComplete] = useState(false);
   const [hasEntered, setHasEntered] = useState(false);
 
   const { scrollYProgress } = useScroll({
@@ -21,8 +20,6 @@ export function StrategyTimeline() {
       setHasEntered(true);
     }
 
-    if (isComplete) return;
-
     const totalSteps = strategySteps.length;
     // Map scroll progress (0-1) to steps (1 to totalSteps)
     const stepProgress = latest * totalSteps;
@@ -30,11 +27,6 @@ export function StrategyTimeline() {
 
     if (newCount !== visibleCount && newCount > 0) {
       setVisibleCount(newCount);
-    }
-
-    // Mark complete when all steps visible and scrolled past 85%
-    if (newCount >= totalSteps && latest > 0.85) {
-      setIsComplete(true);
     }
   });
 
@@ -46,7 +38,8 @@ export function StrategyTimeline() {
   }, [hasEntered, visibleCount]);
 
   const totalSteps = strategySteps.length;
-  const containerHeight = isComplete ? "auto" : `${(totalSteps + 1) * 100}vh`;
+  // Fixed height for smooth scroll to next section
+  const containerHeight = `${totalSteps * 70}vh`;
 
   return (
     <section
@@ -55,7 +48,7 @@ export function StrategyTimeline() {
       style={{ height: containerHeight }}
       id="features"
     >
-      <div className={`${isComplete ? '' : 'sticky top-0'} section py-16 md:py-24 lg:py-32 min-h-screen flex items-center bg-background`}>
+      <div className="sticky top-0 section py-16 md:py-24 lg:py-32 min-h-screen flex items-center bg-background">
         {/* Content aligned to global layout system */}
         <div className="section-content">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start">
@@ -72,7 +65,10 @@ export function StrategyTimeline() {
               <motion.h2
                 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-8"
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: hasEntered ? 1 : 0, y: hasEntered ? 0 : 20 }}
+                animate={{
+                  opacity: hasEntered ? 1 : 0,
+                  y: hasEntered ? 0 : 20,
+                }}
                 transition={{ delay: 0.1, duration: 0.6 }}
               >
                 STRATEGIC STEPS TO{" "}
@@ -83,7 +79,10 @@ export function StrategyTimeline() {
               <motion.div
                 className="relative rounded-3xl overflow-hidden bg-primary aspect-square max-w-md hidden lg:block"
                 initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: hasEntered ? 1 : 0, scale: hasEntered ? 1 : 0.9 }}
+                animate={{
+                  opacity: hasEntered ? 1 : 0,
+                  scale: hasEntered ? 1 : 0.9,
+                }}
                 transition={{ delay: 0.2, duration: 0.6 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent" />
@@ -98,13 +97,21 @@ export function StrategyTimeline() {
               {/* Progress indicator */}
               <div className="mt-8 flex lg:hidden items-center gap-2 mb-8">
                 <span className="text-sm text-muted-foreground">Step</span>
-                <span className="text-2xl font-bold text-primary">{visibleCount}</span>
-                <span className="text-sm text-muted-foreground">of {totalSteps}</span>
+                <span className="text-2xl font-bold text-primary">
+                  {visibleCount}
+                </span>
+                <span className="text-sm text-muted-foreground">
+                  of {totalSteps}
+                </span>
               </div>
               <div className="mt-8 hidden lg:flex items-center gap-2">
                 <span className="text-sm text-muted-foreground">Step</span>
-                <span className="text-2xl font-bold text-primary">{visibleCount}</span>
-                <span className="text-sm text-muted-foreground">of {totalSteps}</span>
+                <span className="text-2xl font-bold text-primary">
+                  {visibleCount}
+                </span>
+                <span className="text-sm text-muted-foreground">
+                  of {totalSteps}
+                </span>
               </div>
             </div>
 
@@ -148,7 +155,7 @@ export function StrategyTimeline() {
                     />
 
                     {/* Step number */}
-                    <motion.span 
+                    <motion.span
                       className="text-4xl md:text-6xl font-bold text-primary/20 absolute -left-2 -top-4"
                       animate={{
                         opacity: isVisible ? 1 : 0.3,

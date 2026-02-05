@@ -44,14 +44,50 @@
     --ring: 45 100% 50%;
 
     --radius: 0.75rem;
-    /* 
-    Section Gradients - Darker tones
-    --gradient-section: linear-gradient(180deg, hsl(0 0% 8%) 0%, hsl(0 0% 5%) 40%, hsl(0 0% 5%) 100%);
-    --gradient-section-alt: linear-gradient(180deg, hsl(0 0% 7%) 0%, hsl(0 0% 5%) 50%, hsl(0 0% 5%) 100%);
-    --gradient-radial: radial-gradient(ellipse at center, hsl(0 0% 8%) 0%, hsl(0 0% 5%) 70%);
-    --gradient-hero: radial-gradient(ellipse at 70% 30%, hsl(280 50% 10% / 0.3) 0%, transparent 50%);
-    --gradient-top-fade: linear-gradient(180deg, hsl(0 0% 9%) 0%, hsl(0 0% 6%) 25%, hsl(0 0% 5%) 60%, hsl(0 0% 5%) 100%);
-     */
+
+    /* Smooth Gradient System - Enhanced with more color stops for smoother transitions */
+    --gradient-smooth-radial: radial-gradient(
+      circle at center,
+      hsl(0 0% 12%) 0%,
+      hsl(0 0% 10%) 15%,
+      hsl(0 0% 8%) 30%,
+      hsl(0 0% 6%) 50%,
+      hsl(0 0% 5%) 70%,
+      hsl(0 0% 4%) 85%,
+      hsl(0 0% 3%) 100%
+    );
+
+    --gradient-smooth-blue: radial-gradient(
+      circle at center,
+      hsl(220 80% 20%) 0%,
+      hsl(220 75% 16%) 15%,
+      hsl(220 70% 12%) 30%,
+      hsl(220 65% 9%) 50%,
+      hsl(220 60% 6%) 70%,
+      hsl(220 55% 4%) 85%,
+      hsl(220 50% 3%) 100%
+    );
+
+    --gradient-smooth-vertical: linear-gradient(
+      180deg,
+      hsl(0 0% 9%) 0%,
+      hsl(0 0% 7.5%) 20%,
+      hsl(0 0% 6%) 40%,
+      hsl(0 0% 5%) 60%,
+      hsl(0 0% 4.5%) 80%,
+      hsl(0 0% 4%) 100%
+    );
+
+    --gradient-smooth-accent: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--primary) / 0.9) 25%,
+      hsl(var(--primary) / 0.7) 50%,
+      hsl(var(--accent) / 0.7) 50%,
+      hsl(var(--accent) / 0.9) 75%,
+      hsl(var(--accent)) 100%
+    );
+
     /* Pattern backgrounds */
     --pattern-dots: radial-gradient(circle, hsl(0 0% 25%) 1px, transparent 1px);
     --pattern-grid:
@@ -120,6 +156,23 @@
   /* Section base styling - uses global layout */
   .section {
     @apply relative py-20 md:py-32;
+  }
+
+  /* Smooth Gradient Classes */
+  .gradient-smooth-radial {
+    background: var(--gradient-smooth-radial);
+  }
+
+  .gradient-smooth-blue {
+    background: var(--gradient-smooth-blue);
+  }
+
+  .gradient-smooth-vertical {
+    background: var(--gradient-smooth-vertical);
+  }
+
+  .gradient-smooth-accent {
+    background: var(--gradient-smooth-accent);
   }
 
   .section-gradient {
@@ -222,6 +275,10 @@
     background: linear-gradient(
       135deg,
       hsl(0 0% 10% / 0.8) 0%,
+      hsl(0 0% 9.5% / 0.75) 20%,
+      hsl(0 0% 9% / 0.7) 40%,
+      hsl(0 0% 8.5% / 0.65) 60%,
+      hsl(0 0% 8.2% / 0.62) 80%,
       hsl(0 0% 8% / 0.6) 100%
     );
     backdrop-filter: blur(10px);
@@ -233,6 +290,9 @@
     background-image: linear-gradient(
       135deg,
       hsl(45 100% 50%) 0%,
+      hsl(42 100% 52%) 25%,
+      hsl(40 100% 53%) 50%,
+      hsl(37 100% 54%) 75%,
       hsl(35 100% 55%) 100%
     );
   }
@@ -285,6 +345,9 @@
     background: linear-gradient(
       135deg,
       hsl(0 0% 12% / 0.6) 0%,
+      hsl(0 0% 11% / 0.55) 25%,
+      hsl(0 0% 10% / 0.5) 50%,
+      hsl(0 0% 9% / 0.45) 75%,
       hsl(0 0% 8% / 0.4) 100%
     );
     backdrop-filter: blur(15px);
@@ -302,7 +365,15 @@
   /* Pricing card */
   .pricing-card {
     @apply rounded-xl border border-border p-8;
-    background: linear-gradient(180deg, hsl(0 0% 10%) 0%, hsl(0 0% 6%) 100%);
+    background: linear-gradient(
+      180deg,
+      hsl(0 0% 10%) 0%,
+      hsl(0 0% 9%) 20%,
+      hsl(0 0% 8%) 40%,
+      hsl(0 0% 7%) 60%,
+      hsl(0 0% 6.5%) 80%,
+      hsl(0 0% 6%) 100%
+    );
   }
 
   .pricing-card-featured {
@@ -313,7 +384,15 @@
   /* Testimonial card */
   .testimonial-card {
     @apply rounded-2xl border border-border p-6 min-w-[320px] max-w-[380px];
-    background: linear-gradient(135deg, hsl(0 0% 10%) 0%, hsl(0 0% 7%) 100%);
+    background: linear-gradient(
+      135deg,
+      hsl(0 0% 10%) 0%,
+      hsl(0 0% 9.5%) 20%,
+      hsl(0 0% 9%) 40%,
+      hsl(0 0% 8%) 60%,
+      hsl(0 0% 7.5%) 80%,
+      hsl(0 0% 7%) 100%
+    );
   }
 
   /* Timeline dot */

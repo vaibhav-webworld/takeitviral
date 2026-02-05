@@ -100,7 +100,13 @@ export function Hero() {
                         loading="lazy"
                       />
                       <div className="absolute bottom-3 left-3 flex items-center gap-2">
-                        <div className="bg-gradient-to-br from-pink-500 to-purple-600 p-1 rounded-lg">
+                        <div
+                          className="p-1 rounded-lg"
+                          style={{
+                            background:
+                              "linear-gradient(135deg, hsl(340 82% 52%) 0%, hsl(340 80% 50%) 25%, hsl(330 70% 48%) 50%, hsl(280 65% 45%) 75%, hsl(270 60% 42%) 100%)",
+                          }}
+                        >
                           <InstagramIcon />
                         </div>
                         <div className="text-xs">
@@ -135,7 +141,13 @@ export function Hero() {
                         loading="lazy"
                       />
                       <div className="absolute bottom-3 left-3 flex items-center gap-2">
-                        <div className="bg-gradient-to-br from-pink-500 to-purple-600 p-1 rounded-lg">
+                        <div
+                          className="p-1 rounded-lg"
+                          style={{
+                            background:
+                              "linear-gradient(135deg, hsl(340 82% 52%) 0%, hsl(340 80% 50%) 25%, hsl(330 70% 48%) 50%, hsl(280 65% 45%) 75%, hsl(270 60% 42%) 100%)",
+                          }}
+                        >
                           <InstagramIcon />
                         </div>
                         <div className="text-xs">

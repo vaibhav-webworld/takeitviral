@@ -57,7 +57,7 @@ export function Metrics() {
     >
       {/* Content aligned to global layout system */}
       <div className="section-content">
-        <div className="flex flex-row justify-between">
+        <div className="grid grid-cols-2 gap-6 md:flex md:flex-row md:justify-between">
           {metrics.map((metric, index) => (
             <motion.div
               key={metric.id}
@@ -81,6 +81,14 @@ export function Metrics() {
           ))}
         </div>
       </div>
+      
+      {/* Bottom gradient blend for smooth transition to Brands section */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none z-10"
+        style={{
+          background: "linear-gradient(180deg, transparent 0%, hsl(0 0% 2% / 0.3) 30%, hsl(0 0% 2% / 0.6) 60%, hsl(0 0% 2% / 0.9) 100%)",
+        }}
+      />
     </section>
   );
 }
