@@ -34,7 +34,7 @@ export function AvatarOrbit() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-screen h-screen overflow-hidden gradient-smooth-blue"
+      className="relative w-full h-screen overflow-hidden gradient-smooth-blue"
     >
       {/* Top gradient fade to blend with previous section */}
       <div
@@ -64,7 +64,7 @@ export function AvatarOrbit() {
         }}
       />
       {/* Social Media Client Cards - Radial Expansion */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
         {socialCards.map((card, index) => {
           const Icon = platformIcons[card.platform];
           const color = platformColors[card.platform];
@@ -105,13 +105,16 @@ export function AvatarOrbit() {
             >
               <a
                 href={card.url}
-                className="flex items-center gap-3 px-4 py-3 rounded-full bg-card/60 backdrop-blur-xl border border-border/30 shadow-lg hover:scale-105 transition-transform duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 md:gap-4 px-3 md:px-6 py-2 md:py-4 rounded-full bg-card/60 backdrop-blur-xl border border-border/30 shadow-lg transition-all duration-300 animate-float cursor-pointer hover:scale-[1.15] hover:bg-card/80 hover:border-primary/50 hover:shadow-2xl"
                 style={{
                   boxShadow: `0 0 30px hsl(0 0% 0% / 0.5)`,
+                  animationDelay: `${index * 0.3}s`,
                 }}
               >
                 {/* Avatar */}
-                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-border/50 flex-shrink-0">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-border/50 flex-shrink-0">
                   <img
                     src={card.avatar}
                     alt={card.name}
@@ -124,12 +127,12 @@ export function AvatarOrbit() {
 
                 {/* Info */}
                 <div className="flex flex-col">
-                  <span className="text-foreground font-bold text-sm tracking-wide uppercase">
+                  <span className="text-foreground font-bold text-xs md:text-base tracking-wide uppercase">
                     {card.name}
                   </span>
-                  <div className="flex items-center gap-1.5">
-                    <Icon className="w-4 h-4" style={{ color }} />
-                    <span className="text-muted-foreground text-xs">
+                  <div className="flex items-center gap-1 md:gap-2">
+                    <Icon className="w-3 h-3 md:w-5 md:h-5" style={{ color }} />
+                    <span className="text-muted-foreground text-[10px] md:text-sm">
                       {card.followers}
                     </span>
                   </div>
@@ -145,7 +148,7 @@ export function AvatarOrbit() {
         <img
           src={mainAvatar}
           alt="Creator Avatar"
-          className="w-full max-w-none object-contain h-[35%] md:h-[100%]"
+          className="w-full max-w-none object-contain h-[100%]"
           style={{
             minWidth: "auto",
           }}

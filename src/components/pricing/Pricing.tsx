@@ -17,7 +17,7 @@ export function Pricing() {
           {pricingPlans.map((plan, index) => (
             <motion.div
               key={plan.id}
-              className={`pricing-card ${plan.popular ? 'pricing-card-featured' : ''}`}
+              className={`pricing-card ${plan.popular ? "pricing-card-featured" : ""}`}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -25,12 +25,10 @@ export function Pricing() {
               {/* Header */}
               <div className="flex items-start justify-between mb-6">
                 <div>
-                  <div className="flex items-baseline gap-1 mb-2">
-                    <span className="text-3xl md:text-4xl font-bold">${plan.price}</span>
-                    <span className="text-muted-foreground text-sm">/{plan.period}</span>
-                  </div>
                   <div className="flex items-center gap-2">
-                    <h3 className="font-bold text-base md:text-lg tracking-tight">{plan.name}</h3>
+                    <h3 className="font-bold text-base md:text-lg tracking-tight">
+                      {plan.name}
+                    </h3>
                     {plan.popular && (
                       <span className="bg-foreground text-background text-xs px-2 py-0.5 rounded font-medium">
                         PRO
@@ -55,7 +53,7 @@ export function Pricing() {
                   <div
                     key={featureIndex}
                     className={`flex items-center gap-3 py-2 text-sm ${
-                      !feature.included ? 'text-muted-foreground/50' : ''
+                      !feature.included ? "text-muted-foreground/50" : ""
                     }`}
                   >
                     {feature.included ? (
@@ -75,8 +73,8 @@ export function Pricing() {
                 href="#contact"
                 className={`block w-full text-center py-3 px-4 rounded-lg font-medium text-sm uppercase tracking-wider transition-all ${
                   plan.popular
-                    ? 'bg-primary text-primary-foreground hover:bg-primary/90'
-                    : 'border border-border hover:bg-muted'
+                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                    : "border border-border hover:bg-muted"
                 }`}
               >
                 Book a Call

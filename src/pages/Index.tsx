@@ -20,9 +20,11 @@ const Index = () => {
         <Metrics />
         <Brands />
         <Showcase />
-        <AvatarOrbit />
+        <div className="overflow-x-hidden hidden md:block">
+          <AvatarOrbit />
+        </div>
         <StrategyTimeline />
-        {/* <Pricing /> */}
+        <Pricing />
         <Testimonials />
         <FAQ />
         <CTA />

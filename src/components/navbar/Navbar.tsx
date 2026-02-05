@@ -28,11 +28,11 @@ export function Navbar() {
       initial={false}
     >
       <motion.nav
-        className={`flex items-center justify-between transition-all duration-500 ${
+        className={`flex items-center justify-between transition-all duration-1000 ease-out ${
           isScrolled ? "navbar-collapsed px-6 py-3" : "navbar-full px-0 py-0"
         }`}
         layout
-        transition={{ duration: 0.4, ease: "easeInOut" }}
+        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
       >
         {/* Logo */}
         <motion.a
@@ -74,10 +74,11 @@ export function Navbar() {
         {/* CTA Button */}
         <motion.a
           href="#contact"
-          className={`btn-primary text-sm transition-all duration-500 ${
+          className={`btn-primary text-sm transition-all duration-1000 ease-out ${
             isScrolled ? "rounded-full" : "rounded-lg"
           }`}
           layout
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
