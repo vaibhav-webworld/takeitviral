@@ -3,7 +3,7 @@ export interface SocialCard {
   name: string;
   handle: string;
   followers: string;
-  platform: "youtube" | "instagram" | "twitter" | "pinterest";
+  platform: "youtube" | "instagram" | "twitter" | "linkedin" | "x";
   avatar: string;
   url: string;
 }
@@ -11,37 +11,37 @@ export interface SocialCard {
 export const socialCards: SocialCard[] = [
   {
     id: "1",
-    name: "QUANTUM PROJECT",
-    handle: "@quantumproject",
-    followers: "501K Subscribers",
+    name: "Youtube",
+    handle: "@Kanda_Speaks",
+    followers: "2K Subscribers",
     platform: "youtube",
     avatar: "/placeholders/social-1.png",
-    url: "https://www.youtube.com/@quantumproject",
+    url: "https://www.youtube.com/@Kanda_Speaks",
   },
   {
     id: "2",
-    name: "INDIAN VIDEO SCHOOL",
-    handle: "@indianvideoschool",
-    followers: "65.9k Followers",
+    name: "Instagram",
+    handle: "@kanda_speaks",
+    followers: "10k Followers",
     platform: "instagram",
     avatar: "/placeholders/social-2.png",
-    url: "https://www.instagram.com/indianvideoschool",
+    url: "https://www.instagram.com/kanda_speaks",
   },
   {
     id: "3",
-    name: "THARUN NAIK",
-    handle: "@tharunnaik",
-    followers: "234k Followers",
-    platform: "instagram",
+    name: "Linkedin",
+    handle: "@Vaibhav_Kanda",
+    followers: "3k Followers",
+    platform: "linkedin",
     avatar: "/placeholders/social-3.png",
-    url: "https://www.instagram.com/tharunnaik",
+    url: "https://www.linkedin.com/in/vaibhav-kanda",
   },
   {
     id: "4",
-    name: "THARUN SPEAKS",
-    handle: "@tharunspeaks",
-    followers: "846K Subscribers",
-    platform: "youtube",
+    name: "X",
+    handle: "@Kanda_Speaks",
+    followers: "Follow Now :)",
+    platform: "x",
     avatar: "/placeholders/social-4.png",
     url: "https://www.youtube.com/@tharunspeaks",
   },

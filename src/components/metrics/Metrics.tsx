@@ -55,8 +55,6 @@ export function Metrics() {
       ref={ref}
       className="section section-dots py-20 md:py-24 border-y border-border relative overflow-hidden"
     >
-   
-
       {/* Content aligned to global layout system */}
       <div className="section-content relative z-10">
         <div className="grid grid-cols-2 gap-8 md:gap-12 md:flex md:flex-row md:justify-between">
@@ -69,7 +67,7 @@ export function Metrics() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <motion.h3
-                className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3"
+                className="text-3xl md:text-5xl lg:text-6xl mb-3"
                 initial={{ scale: 0.5 }}
                 animate={isInView ? { scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}

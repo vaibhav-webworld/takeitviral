@@ -42,7 +42,7 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 md:mb-10">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl leading-loose mb-4 md:mb-20">
               Helping Entrepreneurs build organic brands as{" "}
               <span className="text-gradient">niche authorities</span>
             </h1>
@@ -53,7 +53,9 @@ export function Hero() {
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <motion.a
-                href="#contact"
+                href="https://cal.com/vaibhav-kanda/15min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}

@@ -9,7 +9,14 @@ import client4 from "@/assets/placeholders/client-4.png";
 import client5 from "@/assets/placeholders/client-5.png";
 import client6 from "@/assets/placeholders/client-6.png";
 
-const testimonialAvatars = [client1, client2, client3, client4, client5, client6];
+const testimonialAvatars = [
+  client1,
+  client2,
+  client3,
+  client4,
+  client5,
+  client6,
+];
 
 export function Testimonials() {
   // Duplicate for seamless loop
@@ -20,7 +27,7 @@ export function Testimonials() {
       {/* Blur gradients */}
       <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
-      
+
       {/* Header aligned to global layout system */}
       <div className="section-content mb-12">
         <motion.div
@@ -33,7 +40,7 @@ export function Testimonials() {
             <span className="w-2 h-2 bg-pink-500 rounded-full" />
             Testimonials
           </span>
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl">
             What Our Users Say
           </h2>
         </motion.div>
@@ -75,7 +82,9 @@ export function Testimonials() {
                 {/* Author */}
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-semibold text-sm md:text-base">{testimonial.name}</p>
+                    <p className="font-semibold text-sm md:text-base">
+                      {testimonial.name}
+                    </p>
                     <p className="text-muted-foreground text-xs">
                       {testimonial.role}
                     </p>

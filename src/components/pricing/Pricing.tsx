@@ -26,7 +26,7 @@ export function Pricing() {
               <div className="flex items-start justify-between mb-6">
                 <div>
                   <div className="flex items-center gap-2">
-                    <h3 className="font-bold text-base md:text-lg tracking-tight">
+                    <h3 className="text-base md:text-lg tracking-tight">
                       {plan.name}
                     </h3>
                     {plan.popular && (
@@ -70,7 +70,9 @@ export function Pricing() {
 
               {/* Book a Call Button */}
               <a
-                href="#contact"
+                href="https://cal.com/vaibhav-kanda/15min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`block w-full text-center py-3 px-4 rounded-lg font-medium text-sm uppercase tracking-wider transition-all ${
                   plan.popular
                     ? "bg-primary text-primary-foreground hover:bg-primary/90"

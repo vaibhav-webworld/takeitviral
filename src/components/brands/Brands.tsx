@@ -56,7 +56,7 @@ export function Brands() {
                 className="flex items-center justify-center min-w-[180px] md:min-w-[200px] px-8 md:px-10"
               >
                 <span
-                  className="text-lg md:text-2xl font-bold tracking-wide hover:opacity-100 transition-all duration-500 whitespace-nowrap bg-clip-text text-transparent"
+                  className="text-lg md:text-2xl tracking-wide hover:opacity-100 transition-all duration-500 whitespace-nowrap bg-clip-text text-transparent"
                   style={{
                     backgroundImage:
                       "linear-gradient(135deg, hsl(0 0% 60%) 0%, hsl(0 0% 50%) 50%, hsl(0 0% 40%) 100%)",

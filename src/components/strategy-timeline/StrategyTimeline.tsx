@@ -3,6 +3,7 @@
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { strategySteps } from "@/data/strategySteps";
+import kanda from "@/assets/kanda.jpeg";
 
 export function StrategyTimeline() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -63,7 +64,7 @@ export function StrategyTimeline() {
                 {"{ How We Work }"}
               </motion.span>
               <motion.h2
-                className="text-2xl md:text-4xl lg:text-5xl font-bold mb-8"
+                className="text-2xl md:text-4xl lg:text-5xl mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{
                   opacity: hasEntered ? 1 : 0,
@@ -77,7 +78,7 @@ export function StrategyTimeline() {
 
               {/* Decorative Image */}
               <motion.div
-                className="relative rounded-3xl overflow-hidden bg-primary aspect-square max-w-md hidden lg:block"
+                className="relative rounded-3xl overflow-hidden aspect-square max-w-md hidden lg:block"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{
                   opacity: hasEntered ? 1 : 0,
@@ -85,9 +86,14 @@ export function StrategyTimeline() {
                 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent" />
-                <div className="relative z-10 p-8 h-full flex items-end">
-                  <div className="text-primary-foreground">
+                <img
+                  src={kanda}
+                  alt="Strategy"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <div className="text-white">
                     <p className="text-lg font-semibold">Your Success</p>
                     <p className="text-sm opacity-80">Is Our Priority</p>
                   </div>
@@ -97,18 +103,14 @@ export function StrategyTimeline() {
               {/* Progress indicator */}
               <div className="mt-8 flex lg:hidden items-center gap-2 mb-8">
                 <span className="text-sm text-muted-foreground">Step</span>
-                <span className="text-2xl font-bold text-primary">
-                  {visibleCount}
-                </span>
+                <span className="text-2xl text-primary">{visibleCount}</span>
                 <span className="text-sm text-muted-foreground">
                   of {totalSteps}
                 </span>
               </div>
               <div className="mt-8 hidden lg:flex items-center gap-2">
                 <span className="text-sm text-muted-foreground">Step</span>
-                <span className="text-2xl font-bold text-primary">
-                  {visibleCount}
-                </span>
+                <span className="text-2xl text-primary">{visibleCount}</span>
                 <span className="text-sm text-muted-foreground">
                   of {totalSteps}
                 </span>
@@ -137,7 +139,7 @@ export function StrategyTimeline() {
                   >
                     {/* Timeline dot */}
                     <motion.div
-                      className="absolute -left-[9px] top-0 w-4 h-4 rounded-full border-2 border-primary bg-background"
+                      className="absolute -left-[30px] top-0 w-4 h-4 rounded-full border-2 border-primary bg-background"
                       animate={
                         isVisible
                           ? {
@@ -156,7 +158,7 @@ export function StrategyTimeline() {
 
                     {/* Step number */}
                     <motion.span
-                      className="text-4xl md:text-6xl font-bold text-primary/20 absolute -left-2 -top-4"
+                      className="text-4xl md:text-6xl text-primary/20 absolute -left-2 -top-4"
                       animate={{
                         opacity: isVisible ? 1 : 0.3,
                       }}
@@ -167,7 +169,7 @@ export function StrategyTimeline() {
 
                     {/* Content */}
                     <div className="pt-2">
-                      <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-3">
+                      <h3 className="text-lg md:text-xl lg:text-2xl mb-3">
                         {step.title}
                       </h3>
                       <p className="text-muted-foreground text-sm md:text-base leading-relaxed">

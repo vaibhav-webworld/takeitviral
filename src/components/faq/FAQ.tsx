@@ -23,7 +23,7 @@ export function FAQ() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl text-foreground">
               FAQ
             </h2>
             <p className="text-muted-foreground mt-4">
@@ -49,7 +49,9 @@ export function FAQ() {
                   onClick={() => toggleFAQ(faq.id)}
                   className="w-full flex items-center justify-between text-left py-2"
                 >
-                  <span className="text-base md:text-lg font-medium pr-4 md:pr-8">{faq.question}</span>
+                  <span className="text-base md:text-lg font-medium pr-4 md:pr-8">
+                    {faq.question}
+                  </span>
                   <span className="text-primary flex-shrink-0">
                     {openId === faq.id ? (
                       <Minus className="w-5 h-5" />

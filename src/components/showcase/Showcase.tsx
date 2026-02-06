@@ -5,13 +5,13 @@ import { useRef } from "react";
 import { shortFormVideos, longFormVideos } from "@/data/showcase";
 
 // Import showcase images
-import reel1 from "@/assets/placeholders/reel-1.png";
-import reel2 from "@/assets/placeholders/reel-2.png";
-import reel3 from "@/assets/placeholders/reel-3.png";
-import reel4 from "@/assets/placeholders/reel-4.png";
-import longform1 from "@/assets/placeholders/longform-1.png";
-import longform2 from "@/assets/placeholders/longform-2.png";
-import longform3 from "@/assets/placeholders/longform-3.png";
+import reel1 from "@/assets/shortVideos/1.mp4";
+import reel2 from "@/assets/shortVideos/2.mp4";
+import reel3 from "@/assets/shortVideos/3.mp4";
+import reel4 from "@/assets/shortVideos/4.mp4";
+import longform1 from "@/assets/longVideos/1.mp4";
+import longform2 from "@/assets/longVideos/2.mp4";
+import longform3 from "@/assets/longVideos/3.mp4";
 
 const reelImages = [reel1, reel2, reel3, reel4];
 const longformImages = [longform1, longform2, longform3];
@@ -32,7 +32,7 @@ export function Showcase() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4">
               Short Form Videos That{" "}
               <span className="text-gradient">Go Viral</span>
               <span className="inline-block ml-2 animate-float">✨</span>
@@ -53,11 +53,20 @@ export function Showcase() {
               >
                 <div className="card-glass overflow-hidden aspect-[9/16]">
                   <video
-                    src=""
-                    poster={reelImages[index]}
+                    src={reelImages[index]}
                     controls
                     className="w-full h-full object-cover"
-                    preload="none"
+                    preload="metadata"
+                    muted
+                    autoPlay
+                    loop
+                    playsInline
+                    onMouseEnter={(e) => {
+                      e.currentTarget.muted = false;
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.muted = true;
+                    }}
                   />
                 </div>
               </motion.div>
@@ -73,9 +82,8 @@ export function Showcase() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              Trailers and{" "}
-              <span className="text-gradient">Long form</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4">
+              Trailers and <span className="text-gradient">Long form</span>
               <span className="inline-block ml-2 animate-float">🎬</span>
             </h2>
             <p className="text-muted-foreground">
@@ -94,11 +102,20 @@ export function Showcase() {
               >
                 <div className="card-glass overflow-hidden aspect-video">
                   <video
-                    src=""
-                    poster={longformImages[index]}
+                    src={longformImages[index]}
                     controls
                     className="w-full h-full object-cover"
-                    preload="none"
+                    preload="metadata"
+                    muted
+                    autoPlay
+                    loop
+                    playsInline
+                    onMouseEnter={(e) => {
+                      e.currentTarget.muted = false;
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.muted = true;
+                    }}
                   />
                 </div>
               </motion.div>
@@ -114,7 +131,9 @@ export function Showcase() {
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           <motion.a
-            href="#contact"
+            href="https://cal.com/vaibhav-kanda/15min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}

@@ -37,7 +37,7 @@ export function Navbar() {
         {/* Logo */}
         <motion.a
           href="#"
-          className="flex items-center gap-2 text-foreground font-bold text-xl"
+          className="flex items-center gap-2 text-foreground text-xl"
           layout
         >
           <svg
@@ -46,7 +46,13 @@ export function Navbar() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle cx="16" cy="16" r="14" stroke="currentColor" strokeWidth="2" />
+            <circle
+              cx="16"
+              cy="16"
+              r="14"
+              stroke="currentColor"
+              strokeWidth="2"
+            />
             <path
               d="M10 16C10 12.6863 12.6863 10 16 10C19.3137 10 22 12.6863 22 16C22 19.3137 19.3137 22 16 22"
               stroke="currentColor"
@@ -73,7 +79,9 @@ export function Navbar() {
 
         {/* CTA Button */}
         <motion.a
-          href="#contact"
+          href="https://cal.com/vaibhav-kanda/15min"
+          target="_blank"
+          rel="noopener noreferrer"
           className={`btn-primary text-sm transition-all duration-1000 ease-out ${
             isScrolled ? "rounded-full" : "rounded-lg"
           }`}

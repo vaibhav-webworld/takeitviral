@@ -59,7 +59,7 @@ export function Footer() {
                 alt="Logo"
                 className="w-10 h-10 rounded-full object-cover"
               />
-              <span className="font-bold text-lg">tharunspeaks.in</span>
+              <span className="text-lg">tharunspeaks.in</span>
             </motion.div>
             <p className="text-muted-foreground text-sm mb-6 max-w-xs">
               the ultimate beginner-friendly video editing cohort, now powered

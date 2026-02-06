@@ -1,15 +1,16 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Youtube, Instagram } from "lucide-react";
+import { Youtube, Instagram, Linkedin, Twitter } from "lucide-react";
 import mainAvatar from "@/assets/main-avatar.png";
-import orbitBackground from "@/assets/orbit-background.png";
 import { socialCards } from "@/data/socials";
 
 const platformIcons = {
   youtube: Youtube,
   instagram: Instagram,
-  twitter: Youtube, // fallback
+  twitter: Twitter,
   pinterest: Youtube, // fallback
+  linkedin: Linkedin,
+  x: Twitter,
 };
 
 const platformColors = {
@@ -17,6 +18,8 @@ const platformColors = {
   instagram: "#E4405F",
   twitter: "#1DA1F2",
   pinterest: "#BD081C",
+  linkedin: "#0A66C2",
+  x: "#1DA1F2",
 };
 
 // Card positions: [x%, y%] from center, representing where cards appear
@@ -94,6 +97,7 @@ export function AvatarOrbit() {
                       opacity: 0,
                     }
               }
+              whileHover={{ scale: 1.2 }}
               transition={{
                 duration: 1.2,
                 delay: index * 0.12,
@@ -107,7 +111,7 @@ export function AvatarOrbit() {
                 href={card.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 md:gap-4 px-3 md:px-6 py-2 md:py-4 rounded-full bg-card/60 backdrop-blur-xl border border-border/30 shadow-lg transition-all duration-300 animate-float cursor-pointer hover:scale-[1.15] hover:bg-card/80 hover:border-primary/50 hover:shadow-2xl"
+                className="group flex items-center gap-2 md:gap-4 px-3 md:px-6 py-2 md:py-4 rounded-full bg-card/60 backdrop-blur-xl border border-border/30 shadow-lg transition-all duration-300 animate-float cursor-pointer hover:bg-card/80 hover:shadow-2xl hover:z-50"
                 style={{
                   boxShadow: `0 0 30px hsl(0 0% 0% / 0.5)`,
                   animationDelay: `${index * 0.3}s`,
@@ -127,7 +131,7 @@ export function AvatarOrbit() {
 
                 {/* Info */}
                 <div className="flex flex-col">
-                  <span className="text-foreground font-bold text-xs md:text-base tracking-wide uppercase">
+                  <span className="text-foreground text-xs md:text-base tracking-wide uppercase">
                     {card.name}
                   </span>
                   <div className="flex items-center gap-1 md:gap-2">
