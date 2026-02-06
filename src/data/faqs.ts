@@ -7,27 +7,22 @@ export interface FAQ {
 export const faqs: FAQ[] = [
   {
     id: "1",
-    question: "What's your typical process for a new project?",
-    answer: "We start with a discovery call to understand your brand, goals, and target audience. From there, we create a content strategy, develop a production timeline, and begin creating high-quality content tailored to your needs."
+    question: "How long does it take to see actual growth?",
+    answer: "Organic growth is a compounding game. While viral hits can happen anytime, it generally takes 3-4 months of consistent posting and strategy execution to see significant, sustainable changes in your metrics."
   },
   {
     id: "2",
-    question: "How long does a project usually take?",
-    answer: "Timeline varies based on project scope. Short-form content packages typically take 1-2 weeks, while comprehensive brand campaigns can take 4-8 weeks. We'll provide a detailed timeline during our initial consultation."
+    question: "Do I need to film the content myself?",
+    answer: "It depends on your goal. For personal brands, authentic footage of you speaking works best, and we guide you on how to shoot it easily. We handle the heavy lifting—scripting, editing, and optimization—so you just have to hit record."
   },
   {
     id: "3",
-    question: "Do you offer packages or custom quotes?",
-    answer: "We offer both! We have structured packages for common needs, but we also create custom solutions for unique requirements. Every brand is different, and we're flexible in how we work with you."
+    question: "Why do you focus primarily on Instagram and YouTube?",
+    answer: "Right now, Instagram Reels and YouTube Shorts offer the highest organic reach for creators and businesses. We double down on these platforms because they are the most effective vehicles for building both attention and authority."
   },
   {
     id: "4",
-    question: "What's included in a branding package?",
-    answer: "Our branding packages include content strategy, visual identity guidelines, social media templates, short-form video production, and ongoing support. We ensure your brand has a cohesive presence across all platforms."
-  },
-  {
-    id: "5",
-    question: "Can you work with our existing dev or marketing team?",
-    answer: "Absolutely! We frequently collaborate with in-house teams and agencies. We can integrate seamlessly into your existing workflows and provide assets in any format your team needs."
+    question: "Can you guarantee that my video will go viral?",
+    answer: "No agency can ethically guarantee virality on every single post because algorithms change. However, we guarantee a data-backed strategy focused on high retention and engagement, which significantly increases your probability of hitting the algorithm."
   }
 ];

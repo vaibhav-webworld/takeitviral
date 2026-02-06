@@ -3,7 +3,7 @@
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { strategySteps } from "@/data/strategySteps";
-import kanda from "@/assets/kanda.jpeg";
+import kanda from "@/assets/kandatheking/kanda.jpeg";
 
 export function StrategyTimeline() {
   const containerRef = useRef<HTMLDivElement>(null);

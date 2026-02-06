@@ -33,8 +33,8 @@ export function Showcase() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4">
-              Short Form Videos That{" "}
-              <span className="text-gradient">Go Viral</span>
+              Short-Form Content That{" "}
+              <span style={{ color: "#FF0000" }}>Takes It Viral</span>
             </h2>
             <p className="text-muted-foreground">
               We clip content and add our touch to make them viral
