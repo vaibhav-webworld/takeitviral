@@ -36,10 +36,7 @@ export function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="inline-flex items-center gap-2 text-pink-500 text-sm font-medium mb-4">
-            <span className="w-2 h-2 bg-pink-500 rounded-full" />
-            Testimonials
-          </span>
+         
           <h2 className="text-2xl md:text-4xl lg:text-5xl">
             What Our Users Say
           </h2>

@@ -43,13 +43,17 @@ export function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl leading-loose mb-4 md:mb-20">
-              Helping Entrepreneurs build organic brands as{" "}
-              <span className="text-gradient">niche authorities</span>
+              We Don't Just Post{" "}
+              <span className="text-muted-foreground">Content</span>. We Make
+              Your Brand{" "}
+              <span className="text-gradient">
+                <em>Take It Viral.</em>
+              </span>
             </h1>
             <p className="text-muted-foreground text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
-              Scaling brands for niche authorities with world class organic
-              content. Currently working with personal brands, funded startups,
-              Crypto/trading ventures and much more.
+              Don't just share your story—Take It Viral. We engineer high-impact
+              organic content for Personal Brands, Startups, and Creators who
+              are done with average views and ready for massive reach.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <motion.a
@@ -62,22 +66,6 @@ export function Hero() {
               >
                 Book a Discovery Call
               </motion.a>
-              <span className="text-muted-foreground text-sm italic flex items-center gap-2">
-                <span className="text-primary">It's Free</span>
-                <svg
-                  className="w-6 h-6 md:w-8 md:h-8 text-primary"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                >
-                  <path
-                    d="M7 17L17 7M17 7H8M17 7V16"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
             </div>
           </motion.div>
 

@@ -36,9 +36,6 @@ export function Pricing() {
                     )}
                   </div>
                 </div>
-                <button className="w-8 h-8 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-colors">
-                  <Plus className="w-4 h-4" />
-                </button>
               </div>
 
               {/* Description */}

@@ -118,15 +118,8 @@ export function AvatarOrbit() {
                 }}
               >
                 {/* Avatar */}
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-border/50 flex-shrink-0">
-                  <img
-                    src={card.avatar}
-                    alt={card.name}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = "/placeholder.svg";
-                    }}
-                  />
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-border/50 flex-shrink-0 flex items-center justify-center bg-card">
+                  <Icon className="w-7 h-7 md:w-9 md:h-9" style={{ color }} />
                 </div>
 
                 {/* Info */}
@@ -135,7 +128,6 @@ export function AvatarOrbit() {
                     {card.name}
                   </span>
                   <div className="flex items-center gap-1 md:gap-2">
-                    <Icon className="w-3 h-3 md:w-5 md:h-5" style={{ color }} />
                     <span className="text-muted-foreground text-[10px] md:text-sm">
                       {card.followers}
                     </span>

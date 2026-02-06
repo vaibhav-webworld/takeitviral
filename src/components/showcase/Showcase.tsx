@@ -35,7 +35,6 @@ export function Showcase() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4">
               Short Form Videos That{" "}
               <span className="text-gradient">Go Viral</span>
-              <span className="inline-block ml-2 animate-float">✨</span>
             </h2>
             <p className="text-muted-foreground">
               We clip content and add our touch to make them viral
@@ -84,7 +83,6 @@ export function Showcase() {
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4">
               Trailers and <span className="text-gradient">Long form</span>
-              <span className="inline-block ml-2 animate-float">🎬</span>
             </h2>
             <p className="text-muted-foreground">
               Podcast trailers, B2B videos and more
