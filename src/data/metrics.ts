@@ -7,22 +7,22 @@ export interface Metric {
 export const metrics: Metric[] = [
   {
     id: "1",
-    value: "60+",
-    label: "GLOBAL CLIENTS"
+    value: "20+",
+    label: "GLOBAL CLIENTS",
   },
   {
     id: "2",
-    value: "14+",
-    label: "YEARS OF EXPERIENCE"
+    value: "150+ M",
+    label: "VIEW GENERATED",
   },
   {
     id: "3",
-    value: "16+",
-    label: "AWARDS WON"
+    value: "1-on-1",
+    label: "DIRECT SUPPORT",
   },
   {
     id: "4",
-    value: "99%",
-    label: "SUCCESS RATE"
-  }
+    value: "100%",
+    label: "SATISFACTION RATE",
+  },
 ];

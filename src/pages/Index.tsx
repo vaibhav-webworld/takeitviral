@@ -19,14 +19,22 @@ const Index = () => {
         <Hero />
         <Metrics />
         <Brands />
-        <Showcase />
+        <div id="work">
+          <Showcase />
+        </div>
         <div className="overflow-x-hidden hidden md:block">
           <AvatarOrbit />
         </div>
-        <StrategyTimeline />
-        <Pricing />
+        <div id="steps">
+          <StrategyTimeline />
+        </div>
+        <div id="plans">
+          <Pricing />
+        </div>
         <Testimonials />
-        <FAQ />
+        <div id="about">
+          <FAQ />
+        </div>
         <CTA />
       </main>
       <Footer />

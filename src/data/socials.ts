@@ -34,7 +34,7 @@ export const socialCards: SocialCard[] = [
     followers: "3k Followers",
     platform: "linkedin",
     avatar: "/placeholders/social-3.png",
-    url: "https://www.linkedin.com/in/vaibhav-kanda",
+    url: "https://www.linkedin.com/in/vaibhavkanda/",
   },
   {
     id: "4",

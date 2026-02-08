@@ -11,10 +11,18 @@ function AnimatedNumber({
   value: string;
   isInView: boolean;
 }) {
-  const [displayValue, setDisplayValue] = useState("0");
+  const [displayValue, setDisplayValue] = useState(
+    value === "1-on-1" ? value : "0",
+  );
 
   useEffect(() => {
     if (!isInView) return;
+
+    // Skip animation for "1-on-1"
+    if (value === "1-on-1") {
+      setDisplayValue(value);
+      return;
+    }
 
     // Extract number and suffix (e.g., "500M+" -> 500, "M+")
     const match = value.match(/^([\d.]+)(.*)$/);

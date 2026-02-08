@@ -6,14 +6,14 @@ import { socialCards } from "@/data/socials";
 
 const footerLinks = {
   sections: [
-    { label: "What you'll learn", href: "#features" },
-    { label: "Why this Cohort?", href: "#showcase" },
-    { label: "Pricing", href: "#pricing" },
+    { label: "Our Work", href: "#work" },
+    { label: "Steps", href: "#steps" },
+    { label: "Plans", href: "#plans" },
+    { label: "About Us", href: "#about" },
   ],
   pages: [
     { label: "Home", href: "/" },
-    { label: "Hire from us", href: "#contact" },
-    { label: "404", href: "/404" },
+    { label: "Book a Call", href: "https://cal.com/vaibhav-kanda/15min" },
   ],
 };
 
@@ -67,8 +67,8 @@ export function Footer() {
               <span className="text-lg">Kanda Speaks</span>
             </motion.div>
             <p className="text-muted-foreground text-sm mb-6 max-w-xs">
-              the ultimate beginner-friendly video editing cohort, now powered
-              with the most insane AI tools ever.
+              We don't just edit; we engineer growth. The strategic partner for
+              personal brands and startups ready to dominate the feed.
             </p>
             <p className="text-muted-foreground text-sm mb-4">
               Get in Touch:{" "}
@@ -133,6 +133,10 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
+                    {...(link.href.startsWith("http") && {
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    })}
                     className="text-muted-foreground text-sm hover:text-foreground transition-colors"
                   >
                     {link.label}
