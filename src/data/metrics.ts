@@ -17,7 +17,7 @@ export const metrics: Metric[] = [
   },
   {
     id: "3",
-    value: "1-on-1",
+    value: "1 : 1",
     label: "DIRECT SUPPORT",
   },
   {

@@ -12,14 +12,14 @@ function AnimatedNumber({
   isInView: boolean;
 }) {
   const [displayValue, setDisplayValue] = useState(
-    value === "1-on-1" ? value : "0",
+    value === "1 : 1" ? value : "0",
   );
 
   useEffect(() => {
     if (!isInView) return;
 
     // Skip animation for "1-on-1"
-    if (value === "1-on-1") {
+    if (value === "1 : 1") {
       setDisplayValue(value);
       return;
     }
@@ -75,7 +75,7 @@ export function Metrics() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <motion.h3
-                className="text-3xl md:text-5xl lg:text-6xl mb-3"
+                className="text-3xl md:text-5xl lg:text-5xl mb-3"
                 initial={{ scale: 0.5 }}
                 animate={isInView ? { scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
