@@ -5,12 +5,12 @@ export interface Brand {
 }
 
 export const brands: Brand[] = [
-  { id: "1", name: "Dune" },
-  { id: "2", name: "Oasis" },
-  { id: "3", name: "Asterisk" },
-  { id: "4", name: "Eooks" },
-  { id: "5", name: "Opal" },
-  { id: "6", name: "Dune" },
-  { id: "7", name: "Stabledash" },
-  { id: "8", name: "Quantum" },
+  { id: "1", name: "Blackbox.ai" },
+  { id: "2", name: "Asklexy.me" },
+  { id: "3", name: "Blackbox.ai" },
+  { id: "4", name: "Asklexy.me" },
+  { id: "5", name: "Blackbox.ai" },
+  { id: "6", name: "Asklexy.me" },
+  { id: "7", name: "Blackbox.ai" },
+  { id: "8", name: "Asklexy.me" },
 ];
