@@ -8,7 +8,7 @@ export interface HeroClient {
 
 import Client1 from "@/assets/clients/1.png";
 import Client2 from "@/assets/clients/2.png";
-import Client3 from "@/assets/placeholders/client-1.png";
+import Client3 from "@/assets/clients/3.png";
 import Client4 from "@/assets/clients/4.png";
 import Client5 from "@/assets/placeholders/client-3.png";
 import Client6 from "@/assets/placeholders/client-4.png";
@@ -29,8 +29,8 @@ export const heroClients: HeroClient[] = [
   },
   {
     id: "3",
-    name: "Liah",
-    followers: "243K+ Followers",
+    name: "Tanya Milton",
+    followers: "",
     image: Client3,
     platform: "instagram",
   },
