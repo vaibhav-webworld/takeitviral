@@ -74,7 +74,7 @@ export function Pricing() {
                 className={`block w-full text-center py-3 px-4 rounded-lg font-medium text-sm uppercase tracking-wider transition-all ${
                   plan.popular
                     ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                    : "border border-border hover:bg-muted"
+                    : "border border-border bg-muted hover:bg-muted/90"
                 }`}
               >
                 Book a Call
