@@ -23,8 +23,8 @@ export function FAQ() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-7xl lg:text-8xl text-foreground">
-              FAQ
+            <h2 className="text-5xl md:text-7xl lg:text-8xl text-foreground font-display">
+              F<span className="heading-accent">A</span>Q
             </h2>
             <p className="text-muted-foreground mt-4">
               Got specific questions?

@@ -64,7 +64,7 @@ export function StrategyTimeline() {
                 {"{ How We Work }"}
               </motion.span>
               <motion.h2
-                className="text-2xl md:text-4xl lg:text-5xl mb-8"
+                className="text-2xl md:text-4xl lg:text-5xl mb-8 font-display uppercase"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{
                   opacity: hasEntered ? 1 : 0,
@@ -72,8 +72,8 @@ export function StrategyTimeline() {
                 }}
                 transition={{ delay: 0.1, duration: 0.6 }}
               >
-                STRATEGIC STEPS TO{" "}
-                <span className="block">IMPACTFUL RESULTS</span>
+                Strategic Steps to{" "}
+                <span className="heading-accent normal-case">Impactful Results</span>
               </motion.h2>
 
               {/* Decorative Image */}

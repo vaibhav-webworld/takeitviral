@@ -33,11 +33,13 @@ export function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl md:text-4xl lg:text-5xl mb-4 uppercase tracking-tight">
-            Stop Delaying Your Dreams.
+          <h2 className="text-2xl md:text-4xl lg:text-5xl mb-4 font-display uppercase tracking-tight">
+            Stop Delaying Your{" "}
+            <span className="heading-accent normal-case">Dreams.</span>
           </h2>
-          <h2 className="text-2xl md:text-4xl lg:text-5xl mb-8 md:mb-12 uppercase tracking-tight">
-            Start Today.
+          <h2 className="text-2xl md:text-4xl lg:text-5xl mb-8 md:mb-12 font-display uppercase tracking-tight">
+            Start{" "}
+            <span className="heading-accent normal-case">Today.</span>
           </h2>
 
           <CTAButton className="text-base md:text-lg px-8 md:px-12 py-3 md:py-4 inline-block" />

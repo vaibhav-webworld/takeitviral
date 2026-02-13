@@ -78,12 +78,23 @@ export default {
           "sans-serif",
         ],
         heading: [
+          "Syne",
           "Poppins",
           "-apple-system",
           "BlinkMacSystemFont",
           "Segoe UI",
           "Roboto",
           "sans-serif",
+        ],
+        display: [
+          "Syne",
+          "Poppins",
+          "sans-serif",
+        ],
+        accent: [
+          "Playfair Display",
+          "Georgia",
+          "serif",
         ],
       },
       keyframes: {

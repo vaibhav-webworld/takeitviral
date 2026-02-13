@@ -31,12 +31,12 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl leading-loose mb-4 md:mb-20">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl leading-loose mb-4 md:mb-20 font-display">
               We Don't Just Post{" "}
               <span className="text-muted-foreground">Content</span>. We Make
               Your Brand{" "}
-              <span className="text-gradient">
-                <em>Take It Viral.</em>
+              <span className="heading-accent text-4xl md:text-5xl lg:text-6xl xl:text-6xl">
+                Take It Viral.
               </span>
             </h1>
             <p className="text-muted-foreground text-base md:text-lg mb-6 md:mb-8 leading-relaxed">

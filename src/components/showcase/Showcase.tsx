@@ -33,9 +33,9 @@ export function Showcase() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 font-display">
               Short-Form Content That{" "}
-              <span className="text-[hsl(var(--accent-red))]">Takes It Viral</span>
+              <span className="heading-accent">Takes It Viral</span>
             </h2>
             <p className="text-muted-foreground">
               We clip content and add our touch to make them viral
@@ -82,8 +82,9 @@ export function Showcase() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4">
-              Trailers and <span className="text-gradient">Long form</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 font-display">
+              Trailers &{" "}
+              <span className="heading-accent">Long Form</span>
             </h2>
             <p className="text-muted-foreground">
               Podcast trailers, B2B videos and more
