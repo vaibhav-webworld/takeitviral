@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { testimonials } from "@/data/testimonials";
+import { MarqueeFade } from "@/components/ui/marquee-fade";
 import client1 from "@/assets/placeholders/client-1.png";
 import client2 from "@/assets/placeholders/client-2.png";
 import client3 from "@/assets/placeholders/client-3.png";
@@ -25,8 +26,7 @@ export function Testimonials() {
   return (
     <section className="section section-top-fade py-24 overflow-hidden relative">
       {/* Blur gradients */}
-      <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
+      <MarqueeFade width="sm" zIndex={20} />
 
       {/* Header aligned to global layout system */}
       <div className="section-content mb-12">
@@ -46,8 +46,7 @@ export function Testimonials() {
       {/* Full-bleed marquee - background extends edge-to-edge */}
       <div className="relative">
         {/* Gradient masks */}
-        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-background to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-background to-transparent z-10" />
+        <MarqueeFade width="sm" zIndex={10} />
 
         {/* Scrolling testimonials */}
         <div className="flex overflow-hidden">

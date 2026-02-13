@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { shortFormVideos, longFormVideos } from "@/data/showcase";
+import { CTAButton } from "@/components/ui/cta-button";
 
 // Import showcase images
 import reel1 from "@/assets/shortVideos/1.mp4";
@@ -34,7 +35,7 @@ export function Showcase() {
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4">
               Short-Form Content That{" "}
-              <span style={{ color: "#FF0000" }}>Takes It Viral</span>
+              <span className="text-[hsl(var(--accent-red))]">Takes It Viral</span>
             </h2>
             <p className="text-muted-foreground">
               We clip content and add our touch to make them viral
@@ -128,16 +129,7 @@ export function Showcase() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <motion.a
-            href="https://cal.com/vaibhav-kanda/15min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            Book a Discovery Call
-          </motion.a>
+          <CTAButton />
         </motion.div>
       </div>
     </section>

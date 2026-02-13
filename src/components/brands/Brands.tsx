@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { brands } from "@/data/brands";
+import { MarqueeFade } from "@/components/ui/marquee-fade";
 
 export function Brands() {
   // Duplicate for seamless loop
@@ -10,17 +11,10 @@ export function Brands() {
   return (
     <section className="section section-top-fade py-16 md:py-20 overflow-hidden border-b border-border/50 relative">
       {/* Gradient background overlay */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-30"
-        style={{
-          background:
-            "linear-gradient(90deg, hsl(0 0% 8% / 0.5) 0%, transparent 20%, transparent 80%, hsl(0 0% 8% / 0.5) 100%)",
-        }}
-      />
+      <div className="absolute inset-0 pointer-events-none opacity-30 gradient-overlay-horizontal" />
 
       {/* Blur gradients */}
-      <div className="absolute left-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+      <MarqueeFade width="md" zIndex={10} />
 
       {/* Content aligned to global layout system */}
       <div className="section-content mb-12 relative z-10">
@@ -36,8 +30,7 @@ export function Brands() {
       {/* Full-bleed marquee - background extends edge-to-edge */}
       <div className="relative">
         {/* Gradient masks */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-r from-background to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-l from-background to-transparent z-10" />
+        <MarqueeFade width="md" zIndex={10} />
 
         {/* Marquee container */}
         <div className="flex overflow-hidden">
@@ -55,14 +48,7 @@ export function Brands() {
                 key={`${brand.id}-${index}`}
                 className="flex items-center justify-center min-w-[180px] md:min-w-[200px] px-8 md:px-10"
               >
-                <span
-                  className="text-lg md:text-2xl tracking-wide hover:opacity-100 transition-all duration-500 whitespace-nowrap bg-clip-text text-transparent"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(135deg, hsl(0 0% 60%) 0%, hsl(0 0% 50%) 50%, hsl(0 0% 40%) 100%)",
-                    filter: "drop-shadow(0 0 20px hsl(0 0% 100% / 0.1))",
-                  }}
-                >
+                <span className="text-lg md:text-2xl tracking-wide hover:opacity-100 transition-all duration-500 whitespace-nowrap text-gradient-brands">
                   {brand.id === "3" && "✳︎ "}
                   {brand.name}
                   {brand.id === "5" && <span className="ml-2">◎</span>}
