@@ -177,9 +177,9 @@
 
     --gradient-footer-bg: linear-gradient(
       180deg,
-      hsl(0 3% 7%) 0%,
-      hsl(0 0% 4%) 50%,
-      hsl(0 0% 5%) 100%
+      hsl(0 0% 3%) 0%,
+      hsl(0 0% 2.5%) 40%,
+      hsl(0 0% 2%) 100%
     );
 
     --gradient-overlay-horizontal: linear-gradient(
@@ -346,16 +346,6 @@
   .btn-primary:hover {
     box-shadow: 0 0 30px hsl(45 100% 50% / 0.5);
     transform: translateY(-2px);
-  }
-
-  .btn-accent {
-    @apply inline-flex items-center justify-center px-8 py-4 rounded-full text-accent-foreground bg-accent transition-all duration-300;
-    box-shadow: 0 0 25px hsl(75 100% 55% / 0.4);
-  }
-
-  .btn-accent:hover {
-    box-shadow: 0 0 40px hsl(75 100% 55% / 0.6);
-    transform: scale(1.02);
   }
 
   .btn-outline {

@@ -3,14 +3,12 @@ import { CAL_LINK, CTA_TEXT } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 interface CTAButtonProps {
-  variant?: "primary" | "accent";
   text?: "primary" | "short" | string;
   className?: string;
   showArrow?: boolean;
 }
 
 export function CTAButton({
-  variant = "primary",
   text = "primary",
   className,
   showArrow = false,
@@ -22,14 +20,12 @@ export function CTAButton({
         ? CTA_TEXT.short
         : text;
 
-  const baseClass = variant === "accent" ? "btn-accent" : "btn-primary";
-
   return (
     <motion.a
       href={CAL_LINK}
       target="_blank"
       rel="noopener noreferrer"
-      className={cn(baseClass, className)}
+      className={cn("btn-primary", className)}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
     >

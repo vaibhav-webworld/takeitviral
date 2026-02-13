@@ -40,7 +40,7 @@ export function CTA() {
             Start Today.
           </h2>
 
-          <CTAButton variant="accent" className="text-base md:text-lg px-8 md:px-12 py-3 md:py-4" />
+          <CTAButton className="text-base md:text-lg px-8 md:px-12 py-3 md:py-4 inline-block" />
         </motion.div>
       </div>
     </section>
