@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { CTAButton } from "@/components/ui/cta-button";
 
 const navLinks = [
   { label: "Features", href: "#features" },
@@ -78,33 +79,13 @@ export function Navbar() {
         </motion.div>
 
         {/* CTA Button */}
-        <motion.a
-          href="https://cal.com/vaibhav-kanda/15min"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`btn-primary text-sm transition-all duration-1000 ease-out ${
+        <CTAButton
+          text="short"
+          className={`text-sm transition-all duration-1000 ease-out ${
             isScrolled ? "rounded-full" : "rounded-lg"
           }`}
-          layout
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-        >
-          Book a Call
-          <svg
-            className="w-4 h-4 ml-1"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </motion.a>
+          showArrow
+        />
       </motion.nav>
     </motion.header>
   );

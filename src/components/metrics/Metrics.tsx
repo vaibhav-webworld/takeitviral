@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import { metrics } from "@/data/metrics";
+import { GradientOverlay } from "@/components/ui/gradient-overlay";
 
 function AnimatedNumber({
   value,
@@ -75,13 +76,10 @@ export function Metrics() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <motion.h3
-                className="text-3xl md:text-5xl lg:text-5xl mb-3"
+                className="text-3xl md:text-5xl lg:text-5xl mb-3 text-shadow-glow"
                 initial={{ scale: 0.5 }}
                 animate={isInView ? { scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-                style={{
-                  textShadow: "0 0 40px hsl(45 100% 50% / 0.15)",
-                }}
               >
                 <AnimatedNumber value={metric.value} isInView={isInView} />
               </motion.h3>
@@ -94,13 +92,7 @@ export function Metrics() {
       </div>
 
       {/* Bottom gradient blend for smooth transition to Brands section */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none z-10"
-        style={{
-          background:
-            "linear-gradient(180deg, transparent 0%, hsl(0 0% 2% / 0.3) 30%, hsl(0 0% 2% / 0.6) 60%, hsl(0 0% 2% / 0.9) 100%)",
-        }}
-      />
+      <GradientOverlay direction="bottom" height="h-24" />
     </section>
   );
 }

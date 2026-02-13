@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { Youtube, Instagram, Linkedin, Twitter } from "lucide-react";
 import mainAvatar from "@/assets/main-avatar.png";
 import { socialCards } from "@/data/socials";
+import { GradientOverlay } from "@/components/ui/gradient-overlay";
 
 const platformIcons = {
   youtube: Youtube,
@@ -40,29 +41,24 @@ export function AvatarOrbit() {
       className="relative w-full h-screen overflow-hidden gradient-smooth-blue"
     >
       {/* Top gradient fade to blend with previous section */}
-      <div
-        className="absolute top-0 left-0 right-0 h-48 md:h-64 lg:h-80 pointer-events-none z-10"
-        style={{
-          background:
-            "linear-gradient(180deg, hsl(0 0% 2%) 0%, hsl(0 0% 2% / 0.95) 10%, hsl(0 0% 2% / 0.85) 20%, hsl(0 0% 2% / 0.7) 30%, hsl(0 0% 2% / 0.5) 45%, hsl(0 0% 2% / 0.25) 65%, hsl(0 0% 2% / 0.1) 80%, transparent 100%)",
-        }}
+      <GradientOverlay
+        direction="top"
+        extended
+        height="h-48 md:h-64 lg:h-80"
       />
 
       {/* Bottom gradient fade to blend with next section */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-48 md:h-64 lg:h-80 pointer-events-none z-10"
-        style={{
-          background:
-            "linear-gradient(0deg, hsl(0 0% 2%) 0%, hsl(0 0% 2% / 0.95) 10%, hsl(0 0% 2% / 0.85) 20%, hsl(0 0% 2% / 0.7) 30%, hsl(0 0% 2% / 0.5) 45%, hsl(0 0% 2% / 0.25) 65%, hsl(0 0% 2% / 0.1) 80%, transparent 100%)",
-        }}
+      <GradientOverlay
+        direction="bottom"
+        extended
+        height="h-48 md:h-64 lg:h-80"
       />
 
       {/* Blurred gradient overlay - smooth transitions */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background:
-            "radial-gradient(circle at 30% 40%, hsl(220 90% 30% / 0.5) 0%, hsl(220 85% 28% / 0.35) 20%, transparent 60%), radial-gradient(circle at 70% 60%, hsl(240 80% 25% / 0.4) 0%, hsl(240 75% 22% / 0.25) 20%, transparent 60%)",
+          background: "var(--gradient-blue-radial-overlay)",
           filter: "blur(120px)",
         }}
       />

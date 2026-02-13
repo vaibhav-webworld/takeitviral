@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { pricingPlans } from "@/data/pricing";
 import { Check, X, Plus } from "lucide-react";
+import { CAL_LINK } from "@/lib/constants";
 
 export function Pricing() {
   const ref = useRef(null);
@@ -67,7 +68,7 @@ export function Pricing() {
 
               {/* Book a Call Button */}
               <a
-                href="https://cal.com/vaibhav-kanda/15min"
+                href={CAL_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block w-full text-center py-3 px-4 rounded-lg font-medium text-sm uppercase tracking-wider transition-all ${
