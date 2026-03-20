@@ -46,13 +46,19 @@ export function Brands() {
             {duplicatedBrands.map((brand, index) => (
               <div
                 key={`${brand.id}-${index}`}
-                className="flex items-center justify-center min-w-[180px] md:min-w-[200px] px-8 md:px-10"
+                className="flex items-center justify-center min-w-[200px] md:min-w-[220px] px-8 md:px-10"
               >
-                <span className="text-lg md:text-2xl tracking-wide hover:opacity-100 transition-all duration-500 whitespace-nowrap text-gradient-brands">
-                  {brand.id === "3" && "✳︎ "}
-                  {brand.name}
-                  {brand.id === "5" && <span className="ml-2">◎</span>}
-                </span>
+                {brand.logo ? (
+                  <img
+                    src={brand.logo}
+                    alt={brand.name}
+                    className="h-12 md:h-16 w-auto object-contain"
+                  />
+                ) : (
+                  <span className="text-lg md:text-2xl font-bold tracking-wide hover:opacity-100 transition-all duration-500 whitespace-nowrap text-gradient-brands">
+                    {brand.name}
+                  </span>
+                )}
               </div>
             ))}
           </motion.div>

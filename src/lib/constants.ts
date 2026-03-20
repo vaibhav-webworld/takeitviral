@@ -7,7 +7,7 @@
 export const CAL_LINK = "https://cal.com/vaibhav-kanda/15min" as const;
 
 // Contact Information
-export const CONTACT_EMAIL = "vaibhavkandaofficial@gmail.com" as const;
+export const CONTACT_EMAIL = "kanda@takeitviral.com" as const;
 
 // Animation Timing
 export const STAGGER_DELAYS = {

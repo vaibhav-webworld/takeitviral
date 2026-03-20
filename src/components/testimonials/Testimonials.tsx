@@ -3,21 +3,6 @@
 import { motion } from "framer-motion";
 import { testimonials } from "@/data/testimonials";
 import { MarqueeFade } from "@/components/ui/marquee-fade";
-import client1 from "@/assets/placeholders/client-1.png";
-import client2 from "@/assets/placeholders/client-2.png";
-import client3 from "@/assets/placeholders/client-3.png";
-import client4 from "@/assets/placeholders/client-4.png";
-import client5 from "@/assets/placeholders/client-5.png";
-import client6 from "@/assets/placeholders/client-6.png";
-
-const testimonialAvatars = [
-  client1,
-  client2,
-  client3,
-  client4,
-  client5,
-  client6,
-];
 
 export function Testimonials() {
   // Duplicate for seamless loop
@@ -86,7 +71,7 @@ export function Testimonials() {
                     </p>
                   </div>
                   <img
-                    src={testimonialAvatars[index % 6]}
+                    src={testimonial.avatar}
                     alt={testimonial.name}
                     className="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover"
                   />
