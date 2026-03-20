@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import logo from "@/assets/kandatheking/kanda-logo.png";
+import TIVLogo from "@/assets/brands/TIV-logo.svg";
 import { socialCards } from "@/data/socials";
 import { SocialIcon } from "@/components/ui/social-icons";
 import { CAL_LINK, CONTACT_EMAIL } from "@/lib/constants";
@@ -44,8 +44,8 @@ export function Footer() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
             >
-              <img src={logo} alt="Logo" className="w-12 h-12 object-contain rounded-lg" />
-              <span className="text-xl font-semibold">Kanda Speaks</span>
+              <img src={TIVLogo} alt="TakeItViral" className="w-12 h-12 object-contain rounded-lg" />
+              <span className="text-xl font-semibold">by Kanda Speaks</span>
             </motion.div>
             <p className="text-muted-foreground text-sm mb-6 max-w-sm leading-relaxed">
               We don't just edit; we engineer growth. The strategic partner for
