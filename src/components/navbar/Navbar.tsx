@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { CTAButton } from "@/components/ui/cta-button";
+import MLogo from "@/assets/brands/TIV-logo.svg";
 
 const navLinks = [
   { label: "Features", href: "#features" },
@@ -41,28 +42,12 @@ export function Navbar() {
           className="flex items-center gap-2 text-foreground text-xl"
           layout
         >
-          <svg
-            className="w-8 h-8"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="16"
-              cy="16"
-              r="14"
-              stroke="currentColor"
-              strokeWidth="2"
-            />
-            <path
-              d="M10 16C10 12.6863 12.6863 10 16 10C19.3137 10 22 12.6863 22 16C22 19.3137 19.3137 22 16 22"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <circle cx="16" cy="16" r="3" fill="currentColor" />
-          </svg>
-          <span>TakeItViral</span>
+          <img
+            src={MLogo}
+            alt="TakeItViral"
+            className="w-12 h-12 md:w-14 md:h-14 object-contain"
+          />
+          {/* <span>TakeItViral</span> */}
         </motion.a>
 
         {/* Nav Links */}
